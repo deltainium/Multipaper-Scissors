@@ -1,6 +1,6 @@
 # getaddr() function gets the user's public ip address from ipinfo.io
 # Code courtesy of pytutorial
-# Address is only used internall and will NEVER be sendt to me or any other third party
+# Address is only used internally within the program and will NEVER be sendt to me or any other third party
 
 import requests, json
 
