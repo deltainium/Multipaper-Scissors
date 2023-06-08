@@ -33,11 +33,10 @@ while True:
         continue
 
 def selection():
-    print("Awaiting host's move")
+    print("\nAwaiting host's move")
     # Await client's move while host chooses their own
     hostmove = host.recv(1024)
     hostmove = hostmove.decode('utf-8')
-    print(hostmove)
     print("The host has selected a move")
     
     while True:
@@ -63,8 +62,13 @@ def selection():
 def victor():
     winner = host.recv(1024)
     print(winner.decode('utf-8'))
-    retry = input("Would you like to play again (y/n)?: ")
-    
+    while True:
+        retry = input("Would you like to play again (y/n)?: ")
+        if retry not in ["y","n"]:
+            print("You have made an invalid selection, please try again.")
+            continue
+        else:
+            break
     if retry == "y":
         host.send(bytes(retry,'utf-8'))
     else:
@@ -84,8 +88,8 @@ def home():
     return()
 
 def noreplay():
-    print("Unfortunately the host has declined a rematch")
-    print("Thank you for playing!")
+    print("\nUnfortunately the host has declined a rematch")
+    print("Thank you for playing!\n")
     host.close()
     exit()
 
@@ -94,10 +98,5 @@ moveset = {
         "Paper":int(1),
         "Scissors":int(2),
         }
-
-#commandbook = {
-#        "moveselect":selection(),
-#        "noreplay":noreplay(),
-#        }
 
 home()
