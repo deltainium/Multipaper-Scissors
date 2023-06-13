@@ -17,7 +17,7 @@ sudo chmod +x client
 # or
 sudo chmod +x host
 ```
-Then run the file with:
+and run the file with:
 
 ```bash
 ./client
