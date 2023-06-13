@@ -21,12 +21,17 @@ hostaddr = socket.gethostbyname(hostname)
 hostport = 9900
 
 # Initial networking information output
-print(f"Your public IP address is  -->{bcolors.OKGREEN}{getaddr()}{bcolors.ENDC}<--")
-print(f"Your port for this game is -->    {bcolors.OKGREEN}{hostport}{bcolors.ENDC}     <--")
-print("Give these two values to the other player joining you\n")
+print("For WAN connections:")
+print(f"Your public IP address is: {bcolors.OKGREEN}{getaddr()}{bcolors.ENDC}")
+print(f"Your public port for this game is: {bcolors.OKGREEN}Please refer to your router configuration{bcolors.ENDC}")
+print("\nFor LAN connections:")
+print(f"Your local IP address is: {bcolors.OKGREEN}{hostaddr}{bcolors.ENDC}")
+print(f"Your local port for this game is: {bcolors.OKGREEN}{hostport}{bcolors.ENDC}")
+
+print("\nDetermine if you will be using WAN or LAN and give the corresponding values to the other player joining you\n")
 
 # Mandatory networking warning
-print(f"{bcolors.WARNING}WARNING:{bcolors.ENDC} Sharing this address with malicious third parties can open up your entire home network \n to malicious attacks. Ensure you trust the person you are giving it to.")
+print(f"{bcolors.WARNING}WARNING:{bcolors.ENDC} Sharing your public IP with malicious third parties can open up your entire home network \n to attacks. Ensure you trust the person you are giving it to.")
 
 
 
