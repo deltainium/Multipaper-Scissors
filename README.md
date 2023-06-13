@@ -27,7 +27,7 @@ Then run the file with:
  Good luck, have fun!   
 ## Usage - WAN / Public Internet
 **Host:**  
-Multipaper-Scissors works by creating a socket on the host's device, and connecting the client to the host's open socket via TCP. In practical terms this means that 99%  of the time the host will have to open a TCP port on their home router which forwards all connections to port 9900 on their  local machine. Please refer to your router's manual for more information on port forwarding.  
+Multipaper-Scissors works by creating a socket on the host's device, and connecting the client to the host's socket via TCP. In practical terms this means that 99%  of the time the host will have to open a TCP port on their home router which forwards all connections to port 9900 on their  local machine. Please refer to your router's manual for more information on port forwarding.  
 
 After succesfully seting up port forwarding simply provide the client user with your public IP and the port used for port forwarding. Upon startup the host executable will print your public IP for your convenience. Please note the client will require your **external port**, i.e the one you you chose when port forwarding. This is **different** from port 9900 which the game uses to talk with your router.  
 
